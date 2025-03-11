@@ -15,7 +15,12 @@ function backspace() {
 function calculateResult() {
     let display = document.getElementById("display");
     try {
-        display.value = eval(display.value);
+        let expression = display.value;
+
+        // Handle percentage conversion (e.g., 50% → 0.5)
+        expression = expression.replace(/(\d+)%/g, "($1/100)");
+
+        display.value = eval(expression);
     } catch {
         display.value = "Error";
     }
