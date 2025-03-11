@@ -23,13 +23,13 @@ SAFE_FUNCTIONS = {
 
 # Function to safely evaluate expressions
 def safe_eval(expression):
-    # Remove any unsafe characters or input
+    # Remove spaces for cleaner input
     expression = expression.replace(" ", "")
     
-    # Check for invalid characters
-    valid_chars = "0123456789+-*/%().sqrtcsinlog"
+    # Define valid characters
+    valid_chars = "0123456789+-*/%().sqrtcsintanlog"
     if any(char not in valid_chars for char in expression):
-        raise ValueError("Invalid characters in expression")
+        return "Error: Invalid characters in expression"
     
     try:
         # Safely evaluate the expression
