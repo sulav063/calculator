@@ -4,19 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Calculator</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
     <h1>Simple Calculator</h1>
     <div class="calculator">
         <input type="text" id="display" disabled>
-        <div id="calculation"></div> <!-- Show the calculation -->
         <div class="buttons">
             <div class="row">
                 <button onclick="clearDisplay()">C</button>
                 <button onclick="appendToDisplay('%')">%</button>
-                <button onclick="appendToDisplay('Backspace')">←</button>
+                <button onclick="backspace()">←</button>
                 <button onclick="appendToDisplay('/')">/</button>
             </div>
             <div class="row">
@@ -38,14 +36,13 @@
                 <button onclick="appendToDisplay('+')">+</button>
             </div>
             <div class="row">
-                <button onclick="appendToDisplay('00')">0</button>
-                <button onclick="appendToDisplay('0')">00</button>
+                <button onclick="appendToDisplay('00')">00</button>
+                <button onclick="appendToDisplay('0')">0</button>
                 <button onclick="appendToDisplay('.')">.</button>
                 <button onclick="calculateResult()">=</button>
             </div>
         </div>
     </div>
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script src="script.js"></script>
 </body>
 </html>
-
