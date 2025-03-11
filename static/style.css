@@ -1,0 +1,140 @@
+/* Overall Page Styling */
+body {
+    background-color: #0f172a; /* Dark blue background */
+    color: white;
+    text-align: center;
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+/* Centered Calculator Container */
+.calculator {
+    width: 320px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(30, 41, 59, 0.8); /* Glass effect */
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Display Input Field */
+input {
+    width: 100%;
+    height: 60px;
+    font-size: 26px;
+    text-align: right;
+    margin-bottom: 15px;
+    padding-right: 10px;
+    background: transparent;
+    color: #f8fafc;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    outline: none;
+}
+
+/* Calculation Display */
+#calculation {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #94a3b8;
+    min-height: 25px;
+}
+
+/* Buttons Grid */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+/* Button Styling */
+button {
+    width: 100%;
+    height: 60px;
+    font-size: 22px;
+    font-weight: bold;
+    background: rgba(51, 65, 85, 0.8); /* Semi-transparent buttons */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Hover Effect */
+button:hover {
+    background: rgba(100, 116, 139, 0.9);
+    transform: scale(1.05);
+}
+
+/* Special Button Styling */
+button:active {
+    transform: scale(0.95);
+}
+
+/* Make the "/" (division) button yellow */
+button:nth-child(3) { 
+    background: #f59e0b; /* Bright yellow */
+    color: black;
+}
+
+button:nth-child(3):hover {
+    background:  #d97706;
+}
+
+/* Operator buttons */
+button:nth-child(4n) { /* Operator buttons */
+    background: #f59e0b;
+}
+
+button:nth-child(4n):hover {
+    background: #d97706;
+}
+
+/* Equals Button */
+button:nth-last-child(1) { /* Equals Button */
+    background: #10b981;
+    color: #000;
+}
+
+button:nth-last-child(1):hover {
+    background: #059669;
+}
+
+/* Clear Button */
+button:nth-child(1) { /* C button */
+    background: #ef4444;
+}
+
+button:nth-child(1):hover {
+    background: #dc2626;
+}
+
+/* Backspace Button */
+button:nth-child(2) { /* Backspace button */
+    background: #f97316; /* Bright orange */
+}
+
+button:nth-child(2):hover {
+    background: #ea580c;
+}
+
+/* Percentage Button */
+button:nth-child(2) { /* % button */
+    background: #3b82f6; /* Blue */
+}
+
+button:nth-child(2):hover {
+    background: #2563eb;
+}
+
+/* 00 Button */
+button:nth-last-child(2) { /* 00 button */
+    background: #9333ea; /* Purple */
+}
+
+button:nth-last-child(2):hover {
+    background: #7e22ce;
+}
